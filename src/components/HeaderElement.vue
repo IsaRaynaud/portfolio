@@ -2,7 +2,7 @@
 </script>
 
 <template>  
-    <img alt="Vue logo" class="logo" src="@/assets/logo.png" width="200" height="140" />
+    <img alt="Vue logo" class="logo" src="../assets/images/logo.png" width="200" height="140" />
     <nav>
         <a href="/#">Présentation</a>
         <a href="/#">Création</a>

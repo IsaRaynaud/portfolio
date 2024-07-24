@@ -1,8 +1,12 @@
 <script setup>
+import HeaderElement from '../components/HeaderElement.vue'
 import FooterElement from '../components/FooterElement.vue'
 </script>
 
 <template>
+  <header>
+    <HeaderElement />
+  </header>
   <footer>
     <FooterElement />
   </footer>
