@@ -1,17 +1,27 @@
 <template>
-        <figure class="logos_SM">
+    <figure> 
+        <div class="logos_SM">
             <a href="https://www.linkedin.com/in/raynaud-isabelle/" target="_blank"><img src="../assets/images/linkedin.png" alt="Logo LinkedIn"></a>
             <a href="https://github.com/IsaRaynaud" target="_blank"><img src="../assets/images/github.png" alt="Logo Github"></a>
-    </figure>
+        </div>
 
-    <p id="update">Dernière mise à jour le <time datetime="2024-05-17">17 mai 2024</time>.</p>
+        <p id="update">Dernière mise à jour le <time datetime="2024-05-17">17 mai 2024</time>.</p>
+    </figure>
 </template>
 
 <style scoped>
+figure{
+        background-color: #0A080C ;
+        padding: 30px 30px 30px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
 .logos_SM{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .logos_SM:hover{
