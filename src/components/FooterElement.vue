@@ -16,8 +16,9 @@ figure{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 2.5rem;
       }
-      
+
 .logos_SM{
     display: flex;
     flex-direction: row;

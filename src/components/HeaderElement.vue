@@ -19,7 +19,7 @@ import { RouterLink } from 'vue-router'
 <style scoped>
 div {
     background-color: #67507C;
-    margin-bottom: 3 rem;
+    margin-bottom: 2rem;
 }
 
 .logo {
@@ -31,7 +31,8 @@ nav {
     width: 100%;
     font-size: 1.2rem;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
   }
   
 nav a.router-link-exact-active {
