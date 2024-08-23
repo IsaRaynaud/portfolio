@@ -5,8 +5,15 @@
         <img alt="Capture d'écran de la page d'accueil du site Capitaine Meeple" src="./captures/CaptureCapitaineMeeple.jpg">
     </div>
     <ModalWindow v-if="showModalWindow" @close="showModalWindow = false">
-        <template v-slot:title>Mon Image</template>
-      </ModalWindow>
+        <template v-slot:title>Capitaine Meeple</template>
+        <template v-slot:url><a href="https://www.capitainemeeple.com/">www.capitainemeeple.com</a></template>
+        <ul>
+              <li>Création en 2021</li>
+              <li>Mise à jour jusqu'en 2023</li>
+              <li>Utilisation de Wordpress avec Elementor</li>
+        </ul>
+        <template v-slot:image><img alt="Capture d'écran de la page d'accueil du site Capitaine Meeple" src="./captures/CaptureCapitaineMeeple.jpg"></template>
+    </ModalWindow>
     <div class="creation-card">
         <h3>Ristretto</h3>
         <img src="./captures/CaptureRistretto.jpg" alt="Capture d'écran de la page d'accueil du site Ristretto">

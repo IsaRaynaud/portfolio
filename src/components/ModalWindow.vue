@@ -1,9 +1,10 @@
 <template>
     <div class="modal-overlay" @click.self="$emit('close')">
       <div class="modal-content">
-            <h2><slot name="title"></slot></h2>
-            
-        
+          <h2><slot name="title"></slot></h2>
+          <p><slot name="url"></slot></p>
+          <slot></slot>
+          <p><slot name="image"></slot></p>
           <button @click="$emit('close')">Fermer</button>
       </div>
     </div>
