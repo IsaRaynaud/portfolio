@@ -26,9 +26,6 @@
 <script setup>
 import ContactForm from '../components/ContactForm.vue';
 import CreationsCard from '../components/CreationsCard.vue';
-
-
-
 </script>
 
 <style scoped>

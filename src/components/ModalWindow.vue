@@ -1,19 +1,29 @@
 <template>
-    <div class="modal-overlay" @click.self="$emit('close')">
+    <div v-if="isVisible" class="modal-overlay" @click.self="closeModalWindow">
       <div class="modal-content">
           <h2><slot name="title"></slot></h2>
           <p><slot name="url"></slot></p>
           <slot></slot>
           <p><slot name="image"></slot></p>
-          <button @click="$emit('close')">Fermer</button>
+          <button @click="closeModalWindow">Fermer</button>
       </div>
     </div>
   </template>
   
   <script>
   export default {
-    name: "Modal",
-  };
+    props: {
+    isVisible: {
+      type: Boolean,
+      required: true
+    }
+  },
+  methods: {
+    closeModalWindow() {
+      this.$emit('close');
+    }
+  }
+  }
   </script>
   
   <style scoped>

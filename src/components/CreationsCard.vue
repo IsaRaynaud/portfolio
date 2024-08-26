@@ -1,45 +1,33 @@
 <template>
 <div id="cards">
-    <div class="creation-card" @click="showModalWindow = true">
-        <h3>Capitaine Meeple</h3>
-        <img alt="Capture d'écran de la page d'accueil du site Capitaine Meeple" src="./captures/CaptureCapitaineMeeple.jpg">
+    <div class="creation-card" 
+        v-for="(card,index) in cards"
+        :key="index"
+        @click="showModal(index)">
+        <h3>{{card.title}}</h3>
+        <img :alt="card.alt" :src="card.image">
     </div>
-    <ModalWindow v-if="showModalWindow" @close="showModalWindow = false">
-        <template v-slot:title>Capitaine Meeple</template>
-        <template v-slot:url><a href="https://www.capitainemeeple.com/">www.capitainemeeple.com</a></template>
+    <!--Fenêtre modale dynamique-->
+    <ModalWindow
+        :isVisible="activeModal !== null"
+        @close="activeModal = null">
+        <template v-slot:title>{{ cards[activeModal].title }}</template>
+        <template v-slot:url>
+            <a :href="cards[activeModal].url" target="_blank">{{ cards[activeModal].url }}</a>
+        </template>
         <ul>
-              <li>Création en 2021</li>
-              <li>Mise à jour jusqu'en 2023</li>
-              <li>Utilisation de Wordpress avec Elementor</li>
+            <li v-for="(info,index) in cards[activeModal].details" :key="index">{{ info }}</li>
         </ul>
-        <template v-slot:image><img alt="Capture d'écran de la page d'accueil du site Capitaine Meeple" src="./captures/CaptureCapitaineMeeple.jpg"></template>
+        <img :alt="cards[activeModal].alt" :src="cards[activeModal].image">
     </ModalWindow>
-    <div class="creation-card">
-        <h3>Ristretto</h3>
-        <img src="./captures/CaptureRistretto.jpg" alt="Capture d'écran de la page d'accueil du site Ristretto">
-    </div>
-    <div class="creation-card">
-        <h3>JM Développement</h3>
-        <img src="./captures/Capture-jmdvlp.jpg" alt="Capture d'écran de la page d'accueil du site JM Développement">
-    </div>
-    <div class="creation-card">
-        <h3>CV</h3>
-        <img src="./captures/Capture-jmdvlp.jpg" alt="Capture d'écran de la page d'accueil du site JM Développement">
-    </div>
-    <div class="creation-card">
-        <h3>Création de commentaires</h3>
-        <img src="./captures/Capture-jmdvlp.jpg" alt="Capture d'écran de la page d'accueil du site JM Développement">
-    </div>
-    <div class="creation-card">
-        <h3>Cahier des charges</h3>
-        <img src="./captures/Capture-jmdvlp.jpg" alt="Capture d'écran de la page d'accueil du site JM Développement">
-    </div>
-</div>
-    
+</div>   
 </template>
 
 <script>
 import ModalWindow from './ModalWindow.vue';
+import CaptureCapitaineMeeple from './captures/CaptureCapitaineMeeple.jpg';
+import CaptureJmdvlp from './captures/CaptureJmdvlp.jpg';
+import CaptureRistretto from './captures/CaptureRistretto.jpg';
 
 export default {
     name: 'CreationsCard',
@@ -48,9 +36,58 @@ export default {
   },
   data() {
     return {
-      showModalWindow: false,
+      activeModal: null,
+      cards: [
+        {
+            title: "Capitaine Meeple",
+            alt: "Capture d'écran de la page d'accueil du site Capitaine Meeple",
+            image: CaptureCapitaineMeeple,
+            url: "https://www.capitainemeeple.com/",
+            details: ["Création en 2021", "Mise à jour jusqu'en 2023", "Utilisation de Wordpress avec Elementor"]
+        },
+        {
+            title: "Ristretto",
+            alt: "Capture d'écran de la page d'accueil du site Ristretto",
+            image: CaptureRistretto,
+            url: "https://ristretto.media/",
+            details: ["Création en 2023", "Utilisation de Wordpress avec Elementor"]
+        },
+        {
+            title: 'JM Développement',
+            alt: "Capture d'écran de la page d'accueil du site JM Développement",
+            image: CaptureJmdvlp,
+            url: 'https://jm-developpement.com/',
+            details: ['Création en 2023', 'Utilisation de Wordpress avec Elementor'] 
+        },
+        {
+            title: 'Mon CV',
+            alt: "Capture d'écran de la page 'Mon CV', projet de formation",
+            image: './captures/Capture-jmdvlp.jpg',
+            url: 'Github',
+            details: ['Création en 2024', 'Utilisation de HTML et CSS'] 
+        },
+        {
+            title: 'Page de commentaires',
+            alt: "Capture d'écran du projet de création d'espace commentaires",
+            image: './captures/Capture-jmdvlp.jpg',
+            url: 'Github',
+            details: ['Création en 2024', 'Utilisation des codes HTML, CSS et Javascript'] 
+        },
+        {
+            title: 'Cahier des charges',
+            alt: "Capture d'écran du cahier des charges créé lors de ma formation",
+            image: './captures/Capture-jmdvlp.jpg',
+            url: '???',
+            details: ['Création en 2024'] 
+        }
+      ]
     };
   },
+  methods: {
+    showModal(index) {
+        this.activeModal = index;
+    }
+  }
 };
 </script>
 
