@@ -5,14 +5,14 @@
             <a href="https://github.com/IsaRaynaud" target="_blank"><img src="../assets/images/github.png" alt="Logo Github"></a>
         </div>
 
-        <p id="update">Dernière mise à jour le <time datetime="2024-05-17">17 mai 2024</time>.</p>
+        <p id="update">Dernière mise à jour le <time datetime="2024-08-27">27 août 2024</time>.</p>
     </figure>
 </template>
 
 <style scoped>
 figure{
         background-color: #0A080C ;
-        padding: 30px 30px 30px 15px;
+        padding: 1rem 1rem 1rem 0.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;

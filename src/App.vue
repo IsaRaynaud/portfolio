@@ -16,6 +16,3 @@ import FooterElement from './components/FooterElement.vue';
   </footer>
 </template>
 
-<style scoped>
-
-</style>

@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import ErrorView from '../views/ErrorView.vue'
 
 const router = createRouter({
+  mode: 'hash',
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {

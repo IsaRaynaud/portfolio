@@ -1,6 +1,5 @@
 <template>
     <div class="contact-form">
-      <h2>Contactez-moi</h2>
       <form @submit.prevent="sendEmail">
         <div>
           <label for="name">Nom :</label>

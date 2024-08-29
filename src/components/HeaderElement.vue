@@ -1,8 +1,3 @@
-<script setup>
-import { RouterLink } from 'vue-router'
-
-</script>
-
 <template>  
     <div>
         <router-link to="/">
@@ -10,22 +5,31 @@ import { RouterLink } from 'vue-router'
             <h1>Le web plus chouette</h1>
         </router-link>
         <nav>
-            <a href="/#">Présentation</a>
-            <a href="/#">Création</a>
-            <a href="/#">Contact</a>
+            <a href="#presentation">Présentation</a>
+            <a href="#creations">Créations</a>
+            <a href="#contact">Contact</a>
         </nav>
     </div>
 </template>
 
+<script setup>
+import { RouterLink } from 'vue-router'
+
+</script>
+
 <style scoped>
 div {
-    background-color: #67507C;
+    background-color: var(--vt-c-purple);
     margin-bottom: 2rem;
 }
 
 h1 {
   color: white;
   text-align: center;
+}
+
+a{
+  text-decoration: none;
 }
 
 .logo {
@@ -35,14 +39,18 @@ h1 {
 
 nav {
     width: 100%;
+    color: white;
     font-size: 1.2rem;
     text-align: center;
     margin-top: 1rem;
     padding-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
   
 nav a.router-link-exact-active {
-    color: var(--color-text);
+    color: white;
   }
   
 nav a.router-link-exact-active:hover {
