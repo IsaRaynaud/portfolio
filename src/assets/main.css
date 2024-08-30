@@ -23,11 +23,18 @@ h3{
   font-size: 1.4rem;
 }
 
-a {
-  text-decoration: underline;
-  color: var(--vt-c-purple-light);
-  transition: 0.4s;
-  padding: 3px;
+p{
+  font-family: cantarell;
+  font-size: 1rem;
 }
 
+a {
+  text-decoration: underline;
+  color: var(--vt-c-purple);
+  transition: 0.4s;
+}
+
+a:hover{
+  cursor: pointer;
+}
 

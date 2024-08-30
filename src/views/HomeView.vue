@@ -42,5 +42,6 @@ article {
 
 img {
   width: 20%;
+  padding-left: 0.8rem;
 }
 </style>

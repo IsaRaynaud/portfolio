@@ -2,9 +2,9 @@
     <div v-if="isVisible" class="modal-overlay" @click.self="closeModalWindow">
       <div class="modal-content">
           <h2><slot name="title"></slot></h2>
-          <p><slot name="url"></slot></p>
+          <slot name="url"></slot>
           <slot></slot>
-          <p><slot name="image"></slot></p>
+          <slot name="image"></slot>
           <button @click="closeModalWindow">Fermer</button>
       </div>
     </div>
@@ -45,21 +45,12 @@
     border-radius: 1rem;
     width: 600px;
     max-width: 90%;
-  }
-
-  h2{
-    text-align: center;
-    font-size: larger;
-  }
-
-  p{
-    text-align: center;
+    display: grid;
+    place-items: center;
   }
 
   button{
     margin: 1rem;
     padding: 0.3rem;
-    display: flex;
-    justify-content: center;
   }
   </style>

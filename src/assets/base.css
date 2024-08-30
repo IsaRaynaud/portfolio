@@ -20,7 +20,6 @@
   --color-background: var(--vt-c-white);
   --color-background-purple: var( --vt-c-purple);
   --color-background-purple-light: var(--vt-c-purple-light);
-  --color-background-dark: var(--vt-c-divider-dark-1)
 
   --color-border: var(--vt-c-divider-light);
   --color-border-hover: var(--vt-c-purple);
@@ -43,6 +42,6 @@ body {
     Cantarell,
     'Helvetica Neue',
     sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   text-rendering: optimizeLegibility;
 }
