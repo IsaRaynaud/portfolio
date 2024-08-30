@@ -28,6 +28,9 @@ import ModalWindow from './ModalWindow.vue';
 import CaptureCapitaineMeeple from './captures/CaptureCapitaineMeeple.jpg';
 import CaptureJmdvlp from './captures/CaptureJmdvlp.jpg';
 import CaptureRistretto from './captures/CaptureRistretto.jpg';
+import CaptureCahierCharges from './captures/CaptureCahierCharges.jpg';
+import CaptureCV from './captures/CaptureCV.jpg';
+import CaptureCommentaires from './captures/CaptureCommentaires.jpg';
 
 export default {
     name: 'CreationsCard',
@@ -62,22 +65,22 @@ export default {
         {
             title: 'Mon CV',
             alt: "Capture d'écran de la page 'Mon CV', projet de formation",
-            image: './captures/Capture-jmdvlp.jpg',
-            url: 'Github',
+            image: CaptureCV,
+            url: 'https://github.com/IsaRaynaud/cv',
             details: ['Création en 2024', 'Utilisation de HTML et CSS'] 
         },
         {
             title: 'Page de commentaires',
             alt: "Capture d'écran du projet de création d'espace commentaires",
-            image: './captures/Capture-jmdvlp.jpg',
-            url: 'Github',
+            image: CaptureCommentaires,
+            url: 'https://github.com/IsaRaynaud/nouveau_commenatire',
             details: ['Création en 2024', 'Utilisation des codes HTML, CSS et Javascript'] 
         },
         {
             title: 'Cahier des charges',
             alt: "Capture d'écran du cahier des charges créé lors de ma formation",
-            image: './captures/Capture-jmdvlp.jpg',
-            url: '???',
+            image: CaptureCahierCharges,
+            url: 'https://isabelle-raynaud.fr/wp-content/uploads/2024/08/CDC-Socketterie.pdf',
             details: ['Création en 2024'] 
         }
       ]

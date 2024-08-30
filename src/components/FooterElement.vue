@@ -5,7 +5,7 @@
             <a href="https://github.com/IsaRaynaud" target="_blank"><img src="../assets/images/github.png" alt="Logo Github"></a>
         </div>
 
-        <p id="update">Dernière mise à jour le <time datetime="2024-08-27">27 août 2024</time>.</p>
+        <p id="update">Dernière mise à jour le <time datetime="2024-08-30">30 août 2024</time>.</p>
     </figure>
 </template>
 
